@@ -15,7 +15,14 @@ const router = createBrowserRouter([
       { index: true, element: <Videos /> },
       { path: "videos", element: <Videos /> },
       { path: "videos/:keyword", element: <Videos /> },
-      { path: "videos/watch/:videoId", element: <VideoDetail /> },
+      {
+        path: "videos/watch/:videoId",
+        element: <VideoDetail />,
+        loader: async () => {
+          window.scrollTo(0, 0);
+          return null;
+        },
+      },
     ],
   },
 ]);
