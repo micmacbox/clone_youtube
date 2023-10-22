@@ -2,10 +2,10 @@ import { VideoSearchItem } from "../@types/video";
 import { FakeYoutubeClient, YoutubeClient } from "./index";
 
 export default class Youtube {
-  apiClient: FakeYoutubeClient | YoutubeClient;
+  #apiClient: FakeYoutubeClient | YoutubeClient;
 
   constructor(apiClient: FakeYoutubeClient | YoutubeClient) {
-    this.apiClient = apiClient;
+    this.#apiClient = apiClient;
   }
 
   async search(keyword?: string) {
@@ -13,7 +13,7 @@ export default class Youtube {
   }
 
   async #searchByKeyword(keyword: string) {
-    return this.apiClient
+    return this.#apiClient
       .search({
         params: {
           part: "snippet",
@@ -32,7 +32,7 @@ export default class Youtube {
   }
 
   async #mostPopular() {
-    return this.apiClient
+    return this.#apiClient
       .videos({
         params: {
           part: "snippet",
