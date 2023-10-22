@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import VideoCard from "../components/VideoCard";
 import { useQuery } from "@tanstack/react-query";
 import { VideoItem } from "../@types/video";
-import { FakeYoutube, Youtube } from "../api";
+import { useYoutubeApi } from "../context/YoutubeApiContext";
 
 type Props = {};
-
 const Videos: FC<Props> = ({}) => {
+  const { youtube } = useYoutubeApi();
   const { keyword } = useParams();
   const {
     isLoading,
@@ -16,7 +16,6 @@ const Videos: FC<Props> = ({}) => {
   } = useQuery({
     queryKey: ["videos", keyword],
     queryFn: () => {
-      const youtube = new FakeYoutube();
       return youtube.search(keyword);
     },
   });
