@@ -41,20 +41,17 @@ describe("ChannelInfo", () => {
     expect(screen.queryByRole("img")).toBeNull();
   });
 
-  if (
-    ("renders with URL",
-    async () => {
-      fakeYoutube.channelImageURL.mockImplementation(() => "url");
-      render(
-        withAllContexts(
-          withRouter(
-            <Route path="/" element={<ChannelInfo id="id" name="channel" />} />
-          ),
-          fakeYoutube
-        )
-      );
+  it("renders with URL", async () => {
+    fakeYoutube.channelImageURL.mockImplementation(() => "url");
+    render(
+      withAllContexts(
+        withRouter(
+          <Route path="/" element={<ChannelInfo id="id" name="channel" />} />
+        ),
+        fakeYoutube
+      )
+    );
 
-      await screen.findByRole("img");
-    })
-  );
+    await screen.findByRole("img");
+  });
 });
