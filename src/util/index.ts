@@ -1,0 +1,1 @@
+export { formatAgo } from "./date";

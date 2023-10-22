@@ -25,7 +25,7 @@ const Videos: FC<Props> = ({}) => {
       {isLoading && <p>loading...</p>}
       {error && <p>error occured 😰</p>}
       {videos && (
-        <ul>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 gap-y-4">
           {videos.map((video: VideoItem) => {
             return <VideoCard key={video.id} video={video} />;
           })}

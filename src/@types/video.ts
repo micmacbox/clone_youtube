@@ -3,8 +3,23 @@ export type VideoId = {
   videoId: string;
 };
 
+export type VideoImg = {
+  url: string;
+  width: number;
+  height: number;
+};
+
+export type VideoThumbnails = {
+  default: VideoImg;
+  medium: VideoImg;
+  high: VideoImg;
+};
+
 export type VideoSnippet = {
   title: string;
+  thumbnails: VideoThumbnails;
+  channelTitle: string;
+  publishedAt: string;
 };
 
 export type VideoItem = {
