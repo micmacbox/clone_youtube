@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { useYoutubeApi } from "../context";
+import { useYoutubeApi } from "../context/YoutubeApiContext";
 import { useQuery } from "@tanstack/react-query";
 
 type Props = {
