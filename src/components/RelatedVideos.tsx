@@ -1,4 +1,4 @@
-import { useYoutubeApi } from "../context";
+import { useYoutubeApi } from "../context/YoutubeApiContext";
 import { useQuery } from "@tanstack/react-query";
 import { FC } from "react";
 import VideoCard from "./VideoCard";

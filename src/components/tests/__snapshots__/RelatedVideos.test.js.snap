@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RelatedVideos renders correctly 1`] = `
+<DocumentFragment>
+  <ul>
+    <li
+      class="flex gap-1 m-2"
+    >
+      <img
+        alt="England vs. Italy Highlights | European Qualifiers"
+        class="w-60 mr-2"
+        src="https://i.ytimg.com/vi/LcKoyrvqE4I/mqdefault.jpg"
+      />
+      <div>
+        <p
+          class="font-semibold my-2 line-clamp-2"
+        >
+          England vs. Italy Highlights | European Qualifiers
+        </p>
+        <p
+          class="text-sm opacity-80"
+        >
+           TUDN USA
+        </p>
+        <p
+          class="text-sm opacity-80"
+        >
+          4 days ago
+        </p>
+      </div>
+    </li>
+    <li
+      class="flex gap-1 m-2"
+    >
+      <img
+        alt="England vs. Italy Highlights | European Qualifiers2"
+        class="w-60 mr-2"
+        src="https://i.ytimg.com/vi/LcKoyrvqE4I/mqdefault2.jpg"
+      />
+      <div>
+        <p
+          class="font-semibold my-2 line-clamp-2"
+        >
+          England vs. Italy Highlights | European Qualifiers2
+        </p>
+        <p
+          class="text-sm opacity-80"
+        >
+           TUDN USA
+        </p>
+        <p
+          class="text-sm opacity-80"
+        >
+          4 days ago
+        </p>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
