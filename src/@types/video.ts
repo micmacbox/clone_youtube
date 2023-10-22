@@ -1,3 +1,5 @@
+import { VideoType } from "../constants";
+
 export type VideoId = {
   kind: string;
   videoId: string;
@@ -30,4 +32,9 @@ export type VideoItem = {
 export type VideoSearchItem = {
   id: VideoId;
   snippet: VideoSnippet;
+};
+
+export type VideoInfo = {
+  video: VideoItem;
+  type?: VideoType;
 };

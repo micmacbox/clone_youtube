@@ -1,23 +1,22 @@
 import React, { FC } from "react";
-import { VideoItem } from "../@types/video";
+import { VideoInfo } from "../@types/video";
 import { formatAgo } from "../util";
 import { useNavigate } from "react-router-dom";
+import { VideoType } from "../constants";
 
-type Props = { video: VideoItem; type?: string };
-
-const VideoCard: FC<Props> = ({ video, type }) => {
+const VideoCard: FC<VideoInfo> = ({ video, type }) => {
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
-  const isList = type === "list";
+  const isRelatedList = type === VideoType.relatedVideos;
   const navigate = useNavigate();
   return (
     <li
-      className={isList ? "flex gap-1 m-2" : ""}
+      className={isRelatedList ? "flex gap-1 m-2" : ""}
       onClick={() => {
         navigate(`/videos/watch/${video.id}`, { state: { video } });
       }}
     >
       <img
-        className={isList ? "w-60 mr-2" : "w-full"}
+        className={isRelatedList ? "w-60 mr-2" : "w-full"}
         src={thumbnails.medium.url}
         alt={title}
       />

@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { FC } from "react";
 import VideoCard from "./VideoCard";
 import { VideoItem } from "../@types/video";
+import { VideoType } from "../constants";
 
 type Props = {
   id: string;
@@ -26,7 +27,11 @@ const RelatedVideos: FC<Props> = ({ id }) => {
       {videos && (
         <ul>
           {videos.map((video: VideoItem) => (
-            <VideoCard key={video.id} video={video} type="list" />
+            <VideoCard
+              key={video.id}
+              video={video}
+              type={VideoType.relatedVideos}
+            />
           ))}
         </ul>
       )}
