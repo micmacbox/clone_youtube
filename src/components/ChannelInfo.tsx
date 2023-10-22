@@ -9,11 +9,7 @@ type Props = {
 
 const ChannelInfo: FC<Props> = ({ id, name }) => {
   const { youtube } = useYoutubeApi();
-  const {
-    error,
-    isLoading,
-    data: url,
-  } = useQuery({
+  const { data: url } = useQuery({
     queryKey: ["channelImage", id],
     queryFn: () => youtube.channelImageURL(id),
   });

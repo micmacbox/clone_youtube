@@ -1,11 +1,9 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { useLocation } from "react-router-dom";
 import ChannelInfo from "../components/ChannelInfo";
 import RelatedVideos from "../components/RelatedVideos";
 
-type Props = {};
-
-const VideoDetail: FC<Props> = ({}) => {
+const VideoDetail: FC = () => {
   const {
     state: {
       video: {
@@ -19,7 +17,7 @@ const VideoDetail: FC<Props> = ({}) => {
     <section className="flex flex-col lg:flex-row">
       <article className="basis-4/6">
         <iframe
-          title="player"
+          title={title}
           id="player"
           width="100%"
           height="640"

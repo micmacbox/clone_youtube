@@ -5,8 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { VideoItem } from "../@types/video";
 import { useYoutubeApi } from "../context/YoutubeApiContext";
 
-type Props = {};
-const Videos: FC<Props> = ({}) => {
+const Videos: FC = () => {
   const { youtube } = useYoutubeApi();
   const { keyword } = useParams();
   const {

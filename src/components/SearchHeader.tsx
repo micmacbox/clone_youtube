@@ -1,9 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import { BsSearch, BsYoutube } from "react-icons/bs";
 import { Link, useNavigate, useParams } from "react-router-dom";
-type Props = {};
 
-const SearchHeader: FC<Props> = ({}) => {
+const SearchHeader: FC = () => {
   const { keyword } = useParams();
   const navigate = useNavigate();
   const [text, setText] = useState("");
