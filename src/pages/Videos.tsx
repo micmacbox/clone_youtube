@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import VideoCard from "../components/VideoCard";
 import { useQuery } from "@tanstack/react-query";
 import { VideoItem } from "../@types/video";
-import { useYoutubeApi } from "../context/YoutubeApiContext";
+import { useYoutubeApi } from "../context";
 
 const Videos: FC = () => {
-  const { youtube } = useYoutubeApi();
+  const youtube = useYoutubeApi();
   const { keyword } = useParams();
   const {
     isLoading,

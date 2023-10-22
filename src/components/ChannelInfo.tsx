@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { useYoutubeApi } from "../context/YoutubeApiContext";
+import { useYoutubeApi } from "../context";
 import { useQuery } from "@tanstack/react-query";
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 };
 
 const ChannelInfo: FC<Props> = ({ id, name }) => {
-  const { youtube } = useYoutubeApi();
+  const youtube = useYoutubeApi();
   const { data: url } = useQuery({
     queryKey: ["channelImage", id],
     queryFn: () => youtube.channelImageURL(id),

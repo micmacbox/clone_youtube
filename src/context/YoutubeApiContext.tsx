@@ -1,24 +1,10 @@
-import React, { createContext, useContext } from "react";
-import { FakeYoutubeClient, YoutubeClient, Youtube } from "../api";
+import { createContext, useContext } from "react";
+import { Youtube } from "../api";
 
-const youtubeClient = new FakeYoutubeClient();
-// const youtubeClient = new YoutubeClient();
-
-const youtube = new Youtube(youtubeClient);
-export const YoutubeApiContext = createContext({ youtube });
-
-export function YoutubeApiProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <YoutubeApiContext.Provider value={{ youtube }}>
-      {children}
-    </YoutubeApiContext.Provider>
-  );
-}
+export const YoutubeApiContext = createContext<Youtube | null>(null);
 
 export function useYoutubeApi() {
-  return useContext(YoutubeApiContext);
+  const context = useContext(YoutubeApiContext);
+  if (!context) throw new Error("youtubeContext is not initialized");
+  return context;
 }

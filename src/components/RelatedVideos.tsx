@@ -1,4 +1,4 @@
-import { useYoutubeApi } from "../context/YoutubeApiContext";
+import { useYoutubeApi } from "../context";
 import { useQuery } from "@tanstack/react-query";
 import { FC } from "react";
 import VideoCard from "./VideoCard";
@@ -10,7 +10,7 @@ type Props = {
 };
 
 const RelatedVideos: FC<Props> = ({ id }) => {
-  const { youtube } = useYoutubeApi();
+  const youtube = useYoutubeApi();
   const {
     isLoading,
     error,
