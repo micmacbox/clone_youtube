@@ -17,6 +17,7 @@ const Videos: FC = () => {
     queryFn: () => {
       return youtube.search(keyword);
     },
+    staleTime: 1000 * 60,
   });
   return (
     <>

@@ -17,6 +17,7 @@ const RelatedVideos: FC<Props> = ({ id }) => {
   } = useQuery({
     queryKey: ["channel", id],
     queryFn: () => youtube.channelVideos(id),
+    staleTime: 1000 * 60 * 5,
   });
   return (
     <>
