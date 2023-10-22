@@ -21,7 +21,6 @@ const Videos: FC<Props> = ({}) => {
   });
   return (
     <>
-      <div>Videos {keyword ? `${keyword}` : `🔥`}</div>
       {isLoading && <p>loading...</p>}
       {error && <p>error occured 😰</p>}
       {videos && (
