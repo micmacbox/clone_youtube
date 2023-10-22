@@ -21,7 +21,7 @@ const VideoDetail: FC = () => {
           id="player"
           width="100%"
           height="640"
-          src={`http://www.youtube.com/embed/${id}`}
+          src={`https://www.youtube.com/embed/${id}`}
         />
         <div className="p-8">
           <h2 className="text-xl font-bold">{title}</h2>
