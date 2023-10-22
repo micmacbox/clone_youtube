@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoCard renders default type correctly 1`] = `
+<li
+  className=""
+  onClick={[Function]}
+>
+  <img
+    alt="England vs. Italy Highlights | European Qualifiers"
+    className="w-full"
+    src="https://i.ytimg.com/vi/LcKoyrvqE4I/mqdefault.jpg"
+  />
+  <div>
+    <p
+      className="font-semibold my-2 line-clamp-2"
+    >
+      England vs. Italy Highlights | European Qualifiers
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+       
+      TUDN USA
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+      4 days ago
+    </p>
+  </div>
+</li>
+`;
+
+exports[`VideoCard renders grid type correctly 1`] = `
+<li
+  className=""
+  onClick={[Function]}
+>
+  <img
+    alt="England vs. Italy Highlights | European Qualifiers"
+    className="w-full"
+    src="https://i.ytimg.com/vi/LcKoyrvqE4I/mqdefault.jpg"
+  />
+  <div>
+    <p
+      className="font-semibold my-2 line-clamp-2"
+    >
+      England vs. Italy Highlights | European Qualifiers
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+       
+      TUDN USA
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+      4 days ago
+    </p>
+  </div>
+</li>
+`;
+
+exports[`VideoCard renders grid type correctly 2`] = `
+<li
+  className=""
+  onClick={[Function]}
+>
+  <img
+    alt="England vs. Italy Highlights | European Qualifiers"
+    className="w-full"
+    src="https://i.ytimg.com/vi/LcKoyrvqE4I/mqdefault.jpg"
+  />
+  <div>
+    <p
+      className="font-semibold my-2 line-clamp-2"
+    >
+      England vs. Italy Highlights | European Qualifiers
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+       
+      TUDN USA
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+      4 days ago
+    </p>
+  </div>
+</li>
+`;
+
+exports[`VideoCard renders lisit type correctly 1`] = `
+<li
+  className="flex gap-1 m-2"
+  onClick={[Function]}
+>
+  <img
+    alt="England vs. Italy Highlights | European Qualifiers"
+    className="w-60 mr-2"
+    src="https://i.ytimg.com/vi/LcKoyrvqE4I/mqdefault.jpg"
+  />
+  <div>
+    <p
+      className="font-semibold my-2 line-clamp-2"
+    >
+      England vs. Italy Highlights | European Qualifiers
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+       
+      TUDN USA
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+      4 days ago
+    </p>
+  </div>
+</li>
+`;
+
+exports[`VideoCard renders relatedVideos type correctly 1`] = `
+<li
+  className="flex gap-1 m-2"
+  onClick={[Function]}
+>
+  <img
+    alt="England vs. Italy Highlights | European Qualifiers"
+    className="w-60 mr-2"
+    src="https://i.ytimg.com/vi/LcKoyrvqE4I/mqdefault.jpg"
+  />
+  <div>
+    <p
+      className="font-semibold my-2 line-clamp-2"
+    >
+      England vs. Italy Highlights | European Qualifiers
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+       
+      TUDN USA
+    </p>
+    <p
+      className="text-sm opacity-80"
+    >
+      4 days ago
+    </p>
+  </div>
+</li>
+`;
